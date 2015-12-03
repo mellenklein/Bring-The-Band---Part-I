@@ -32,7 +32,7 @@ header {
   }
 }
 input.search {
-  margin: 50px auto;
+  margin: 50px auto 10px;
   display: block;
   padding: 20px 5px;
   font-size: 1.2em;
@@ -40,6 +40,18 @@ input.search {
   border: 1px solid #ECC9E6;
   border-radius: 5px;
   color: #9D448C;
+}
+button.search {
+  font-size: .9em;
+  margin: 10px auto 50px;
+  display: block;
+  padding: 10px 5px;
+  font-size: 1.2em;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  background: #9D448C;
+
 }
 article.artist {
   margin: 0 auto;
@@ -72,4 +84,7 @@ article.artist {
     content: "";
     clear: both;
   }
+}
+article.hide {
+  // display: none;
 }
