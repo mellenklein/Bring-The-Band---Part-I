@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import jQuery from 'jquery';
 
 class Artist extends React.Component {
   render () {
     return (
-      <div className="artist">
-        <h2>Melon & The Mayhem</h2>
-        <p>Followers: 24</p>
-        <img src="http://www.fillmurray.com/60/60"/>
-        <a className="playBtn" href="#">Play Music</a>
-      </div>
+      <article className="artist">
+        <h2>{this.props.artist}</h2>
+        <p>Followers: {this.props.followers}</p>
+        <img src={this.props.image} alt="avatar"/>
+        <a className="playBtn" href={this.props.play} target="_blank">Play Music</a>
+      </article>
     )
   }
 }

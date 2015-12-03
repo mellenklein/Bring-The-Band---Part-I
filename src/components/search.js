@@ -4,7 +4,7 @@ class Search extends React.Component {
   render () {
     return (
       <div>
-        <input className="search" type="text" placeholder="Search for an artist..."/>
+        <input id="search" className="search" type="text" value="melon and the mayhem" placeholder="Search for an artist..."/>
       </div>
     )
   }

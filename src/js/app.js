@@ -11,7 +11,6 @@ import Artists from '../components/artists';
 ReactDOM.render((
   <Router>
     <Route path="/" component={App}>
-      <IndexRoute component={Artists} />
       <Route />
     </Route>
   </Router>
