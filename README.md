@@ -1,53 +1,42 @@
-# Iron Yard Front End Boilerplate
+# Bring The Band
 
+## Description
+A local music venue has asked you to build a promotional app: Bring The Band! Bring the band will allow users to vote for musicians they want to see at the venue. The venue hopes to gain a following, and boost their patron engagement by tracking popular bands, and trends in their market share.
 
-## Installation
+## Objectives
 
-- `cd ~/dev`
-- `git clone git@github.com:theironyard-frontend-nashville/frontend-boilerplate.git <projectname>` replacing <projectname> with your own project name.
-- `cd <projectname>`
-- `rm -rf .git`
-- `git init`
--  Create a new repo on Github.com and [add the remote](https://help.github.com/articles/adding-a-remote/).
+### Performance Objectives
 
-- `npm install`
-  - This will install the node dependencies for you, and will also install any bower components.
-  - This will also run the gulp build process to create the dist folder.
+After completing this assignment, you should be able to...
 
+* use Parse as a back end to store user and other data
+* decipher and consume third-party apis
+* understand and use `localStorage`
 
-## Listening for file changes:
+## Details
 
-If you have any scss or js files that you want to automatically transpile, then run the command:
-`gulp watch`
+### Deliverables
 
+* A gh-pages single page app that satisfies at least the user stories described in Explorer mode.
 
-## Build and watch
+### Requirements  
+You will need to use the [Spotify api](https://developer.spotify.com/web-api/endpoint-reference/) to complete this project. In particular, you will probably want to use the [search endpoint](https://developer.spotify.com/web-api/search-item/), and possibly others.
 
-If you would like to build the `dist/` folder and then watch for file changes, then run the command:
-`gulp`
+## Explorer Mode
 
-This will run:
-- watch
-- lint
-- babel
-- sass
+* A user should be able to log into the website.
+* A user should be able to search for bands.
+* A logged in user should be able to vote for bands they want to see come to their area.
+* A logged in user should be able to view a list of the bands they have voted for.
 
-## Lint (JSCS) our Javascript
+## Adventurer Mode
 
-If you want to validate your Javascript code and it's style against the AirBnb style guide, then run the command:
-`gulp lint`
+* All of Explorer mode.
+* A user should be able to view all bands that have been voted for.
+* A user should be able to see to total number of votes a band has received from all users.
 
-## Compile SASS
+## Epic Mode
 
-If you want to compile your SASS (.scss files), then run the command:
-`gulp sass`
-
-## Transpile ES6 code to ES5
-
-If you want to compile your ES6/ES7 (ES2015/17) Javascript code to ES5 to use new Javascript features now before the browser supports them, then run this command:
-`gulp babel`
-
-## Deploy your project to GitHub Pages
-
-If you want to deploy your project (dist folder) to GitHub pages, then run this command:
-`gulp deploy`
+* All of Adventurer mode.
+* A logged in user should be able to view other user's profiles.
+* A logged in user should be able to view a list of the bands the other user has voted for.
