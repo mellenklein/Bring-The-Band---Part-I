@@ -26,7 +26,22 @@ class App extends React.Component {
   handleServerResponse(response) {
     console.log('hi in server response', response);
     let artists = response.artists.items;
+    let inputBox = $('#search');
+    let errorIcon = $('#errorIcon');
+    let errorMsg = $('#errorMsg');
     console.log(response.artists.items[0]);
+    if(artists[0] === undefined) {
+      inputBox.addClass('searchError');
+      errorIcon.addClass('searchError');
+      errorMsg.addClass('searchError');
+      alert('your search did not return any results.');
+      return
+    }
+    let artistBox = $('#artistBox');
+    artistBox.removeClass('hide');
+    inputBox.removeClass('searchError');
+    errorIcon.removeClass('searchError');
+    errorMsg.removeClass('searchError');
 
     this.setState({
       hasLoaded: true,
@@ -49,11 +64,9 @@ class App extends React.Component {
   handleSubmit() {
     let query = document.getElementById('search').value.toString();
     let submit = document.getElementById('submitBtn');
-    let artistBox = $('#artistBox');
     submit.click(function() {
       console.log('you clicked the submit btn!');
     });
-    artistBox.removeClass('hide');
   }
 
   render() {
@@ -64,7 +77,7 @@ class App extends React.Component {
           <h1>Welcome to Band Wagon</h1>
           <p>Bring the band of your dreams to town!</p>
           <nav>
-            <Link to="profile">Profile</Link>
+            <Link to="register">Register</Link>
             <Link to="/">Search</Link>
             <Link to="login">Login</Link>
           </nav>

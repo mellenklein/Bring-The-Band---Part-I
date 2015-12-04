@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Search extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.handleEnter = this.handleEnter.bind(this);
@@ -15,26 +15,29 @@ class Search extends React.Component {
   render () {
     return (
       <div>
-        <input id="search"
-               ref="searchBox"
-               className="search"
+        <input id="email"
+               ref="email"
+               className="email"
                type="text"
-               placeholder="Search for an artist..."
+               placeholder="Email"
                onKeyUp={this.handleEnter}/>
-         <i    className="fa fa-exclamation-circle"
-               id="errorIcon"></i>
-             <p className="errorMsg"
-                id="errorMsg">Your search did not return any results.</p>
+        <input id="pwd"
+               ref="pwd"
+               className="pwd"
+               type="password"
+               placeholder="Password"
+               onKeyUp={this.handleEnter}/>
+
         <button id="submitBtn"
                 type="submit"
                 className="search"
-                onClick={this.handleEnter}>Search
+                onClick={this.handleEnter}>Log in
         </button>
       </div>
     )
   }
 }
 
-export default Search;
+export default Login;
 
 // value={this.props.value}
